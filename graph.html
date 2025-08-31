@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quantum Jobs - Graph</title>
+</head>
+<body>
+<!-- ? Home Button with Link -->
+<a href="index.html">
+  <button style="padding:10px 20px; background-color:#007bff; color:white; border:none; border-radius:5px; cursor:pointer;">
+     Home
+  </button>
+</a>
+  <h1> Quantum Computing Jobs - Graph View</h1>
+
+  <a href="table.html">Go to Table View</a>
+ <a href="index.html" class="btn">Home</a>
+
+  <canvas id="jobsChart"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('jobsChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr','May','June'],
+        datasets: [{
+          label: 'Number of Jobs',
+          data: [10, 20, 15, 30,27,33],
+          backgroundColor: 'rgba(54, 162, 235, 0.7)'
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pie Chart Example</title>
+</head>
+<body>
+<!-- Home Button with Link -->
+<a href="index.html">
+  <button style="padding:10px 20px; background-color:#007bff; color:white; border:none; border-radius:5px; cursor:pointer;">
+     Home
+  </button>
+</a>
+  <h1>Quantum Job Distribution</h1>
+  <canvas id="pieChart"></canvas>
+  <canvas id="myPieChart" style="width:200px; height:200px;"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('pieChart');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['USA', 'Australia', 'Europe', 'India'],
+        datasets: [{
+          label: 'Job Distribution',
+          data: [40, 25, 20, 15],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.7)',
+            'rgba(54, 162, 235, 0.7)',
+            'rgba(255, 206, 86, 0.7)',
+            'rgba(75, 192, 192, 0.7)'
+          ]
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
+
